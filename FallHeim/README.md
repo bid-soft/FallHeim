@@ -15,7 +15,7 @@ This mod has been made specifically for the most terrible mod contest of OdinPlu
 
 #### Not for Multiplayer Mayhem
 - *10 out of 10 players agree this mod will turn multiplayer sessions into a festival of frustration.*
-- Friends don’t let friends play "World Tree Cutoff" together. Expect mass confusion, collective nausea, and friendships tested to their limits. For the sake of your social life, keep this chaos to yourself!
+- Friends don’t let friends play this mod together. Expect mass confusion, collective nausea, and friendships tested to their limits. For the sake of your social life, keep this chaos to yourself!
 
 #### Performance Catastrophe
 - *10 out of 10 players report FPS drops so severe, you'll think your computer has entered a time warp.*

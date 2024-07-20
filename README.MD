@@ -1,98 +1,77 @@
-# JötunnModStub
+# FallHeim
 
-A Valheim mod stub project using [Jötunn](https://github.com/Valheim-Modding/Jotunn) including build tools and a basic Unity project stub. There is no actual plugin content included, just a bare minimum plugin class. 
+This mod has been made specifically for the most terrible mod contest of OdinPlus discord. The base idea is adding a RigidBody component to all prefabs - everything will crumble to dust.
 
-# Quick Setup Guide
+## Warning and Safety Instructions
 
-These are quick setup steps with no context provided. Please see Jötunns [Github Pages](https://valheim-modding.github.io/Jotunn/guides/overview.html) for a more in depth guide and documentation.
+**Caution**: This mod is designed for the bold, the brave, and the utterly foolhardy. Proceed at your own peril.
 
-## Development Environment Setup
+### User Warnings
 
-How to setup the development enviroment for this project.
+#### Permanent World and Character Sanity Damage
+- *10 out of 10 players confirm this mod will ruin their world and their character's sanity forever.*
+- Once installed, your world will descend into irreversible madness. Consider this a point of no return. Your characters and world will never be the same.
 
-1. Install [Visual Studio 2022](https://visualstudio.microsoft.com) and add the C# workload.
-2. Download this package: [BepInEx pack for Valheim](https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/)
-3. Unpack and copy the contents of `BepInExPack_Valheim` into your Valheim root folder. You should now see a new folder called `<ValheimDir>\unstripped_corlib` and more additional stuff.
-4. Fork and clone this repository using git. That should create a new folder `JotunnModStub`. You can also [use the template function of github](https://github.com/Valheim-Modding/JotunnModStub/generate) to create a new, clean repo out of it and clone that.
-5. Edit `DoPrebuild.props` in the project base path and change `ExecutePrebuild` to `true` if you want Jötunn to automatically generate publicized versions of the game dlls for you.
-6. Open the Solution file `<JotunnModStub>\JotunnModStub.sln`. Right-click on the project or solution in the Solution Explorer and select `Manage NuGet packages...`. It should prompt you a message at the top that some NuGet-Packages are missing. Click "Restore" and restart Visual Studio when finished.
-7. Rename the Solution/Project and everything related so that it resembles your own projects name. This includes the assembly information as well as the Unity project.
 
-A new environment file `Environment.props` can be created in the projects base path `<JotunnModStub>`.
-Make sure you are not in any subfolder.
-Paste this snippet and change the paths accordingly.
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <!-- Valheim install folder. This is normally found automatically, uncomment to overwrite it. Needs to be your path to the base Valheim folder. -->
-    <!-- <VALHEIM_INSTALL>X:\PathToYourSteamLibary\steamapps\common\Valheim</VALHEIM_INSTALL>-->
+#### Not for Multiplayer Mayhem
+- *10 out of 10 players agree this mod will turn multiplayer sessions into a festival of frustration.*
+- Friends don’t let friends play this mod together. Expect mass confusion, collective nausea, and friendships tested to their limits. For the sake of your social life, keep this chaos to yourself!
 
-    <!-- This is the folder where your build gets copied to when using the post-build automations -->
-    <MOD_DEPLOYPATH>$(VALHEIM_INSTALL)\BepInEx\plugins</MOD_DEPLOYPATH>
-  </PropertyGroup>
-</Project>
-```
+#### Performance Catastrophe
+- *10 out of 10 players report FPS drops so severe, you'll think your computer has entered a time warp.*
+- Expect frame rates to plummet faster than a Viking off a cliff.
 
-### Post Build automations
+#### Motion Sickness
+- *8 out of 10 players have experienced motion sickness comparable to a seasick Norseman on a stormy sea.*
+- We recommend keeping a sturdy bucket or bag within arm’s reach. Consider ginger ale or anti-nausea medication as a preemptive strike.
 
-Included in this repo is a PowerShell script `publish.ps1`. The script is referenced in the project file as a post-build event. Depending on the chosen configuration in Visual Studio the script executes the following actions.
+#### Emotional Distress
+- *9 out of 10 players report feelings of deep existential dread and despair.*
+- Watching Valheim crumble around you can lead to significant emotional turmoil. Be prepared for an overwhelming sense of doom and a lingering depression. A therapist on speed dial is advisable.
 
-### Building Debug
+#### Complete Anarchy
+- *11 out of 10 players (yes, it's that bad) warn of total chaos.*
+- Not recommended for children, the elderly, or anyone with a faint heart. Embrace the beautiful chaos!
 
-* The compiled dll file for this project is copied to `<ValheimDir>\BepInEx\plugins` (or whatever path you set as MOD_DEPLOYPATH).
-* A .mdb file is generated for the compiled project dll and copied to `<ValheimDir>\BepInEx\plugins` (or whatever path you set as MOD_DEPLOYPATH).
+### Developer Warnings
 
-### Building Release
+#### Sanity Check Failure
+- *8 out of 10 developers felt their sanity slipping away while working on or with this code.*
 
-* A compressed file with the binaries is created in `<JotunnModStub>\Packages`ready for upload to ThunderStore. Dont forget to include your information in the manifest.json and to change the project's readme file.
+#### Documentation? What Documentation?
+- *9 out of 10 developers were left scratching their heads, wondering if they’d stumbled upon an ancient hieroglyphic script.*
 
-## Developing Assets with Unity
+#### Innovation or Insanity?
+- *11 out of 10 developers can’t decide if this is groundbreaking or grounds for immediate psychological evaluation.*
 
-New Assets can be created with Unity and imported into Valheim using the mod. A Unity project is included in this repository under `<JotunnModStub>\JotunnModUnity`.
+#### Support Group Recommended
+- *12 out of 10 developers (yes, we’ve broken the scale) suggest forming a support group.*
 
-### Unity Editor Setup
+## Heimdall's Sanctuary: The Fall of Valheim
 
-1. [Download](https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe) UnityHub directly from Unity or install it with the Visual Studio Installer via `Individual Components` -> `Visual Studio Tools for Unity`.
-2. You will need an Unity account to register your PC and get a free licence. Create the account, login with it in Unity Hub and get your licence via `Settings` -> `Licence Management`.
-3. Install Unity Editor version 2020.3.33f.
-4. Copy all `assembly_*.dll` from `<ValheimDir>\valheim_Data\Managed` into `<JotunnModStub>\JotunnModUnity\Assets\Assemblies`. **Do this directly in the filesystem - don't open Unity first or import the dlls directly in Unity**.
-5. **Warning:** These assembly files are copyrighted material and you can theoretically get into trouble when you distribute them in your github repository. To avoid that there is a .gitignore file in the Unity project folder. Keep that when you clone or copy this repository.
-6. Open Unity Hub and add the JotunnModUnity project.
-7. Open the project.
-7. Install the `AssetBundle Browser` package in the Unity Editor via `Window`-> `Package Manager` for easy bundle creation.
+In the Age of Twilight, when shadows grew long and the gods faced relentless foes, Odin, All-Father of Asgard, conceived a desperate plan. To rid himself of his enemies once and for all, he resolved to sever Valheim from Yggdrasil, the World Tree. By cutting the realm adrift, he sought to cast his adversaries into the void beyond the Ten Realms.
 
-## Debugging
+Yet, not all among the Aesir shared Odin's ruthless vision. Heimdall, the ever-watchful guardian of Bifrost, foresaw the calamity this act would bring. To preserve the world and its inhabitants, Heimdall created a time capsule at the very moment Odin's blade cleaved the world's tether.
 
-You can enable remote debugging of your mod code at runtime via dnSpy or Visual Studio. Before being able to attach a remote debugger you will have to prepare your game install and turn it into a "Development Build" once:
+Within this time capsule, reality persists as it was, a sanctuary shielded from the cataclysm. Beyond its bounds, the world teeters on the edge of oblivion, forever frozen in the instant of its severance.
 
-1. Locate your Unity Editor installation from the previous step and navigate to `<UnityInstall>\Editor\Data\PlaybackEngines\windowsstandalonesupport\Variations\win64_development_mono`
-2. Copy `UnityPlayer.dll` and `WinPixEventRuntime.dll` from that folder into your game installation folder. Overwrite existing files.
-3. Open the `<Valheim>\valheim_Data\boot.config` with a text editor (Notepad++ for example) and add a new line `player-connection-debug=1` to it.
-4. When starting up Valheim you should see a `Development Build` text at the lower-right corner of the screen.
+Brave soul, you now stand within Heimdall's last refuge, protected by his foresight. Venture beyond this force field, and you will witness the final moment of Valheim's fall. Only by understanding this fateful lore can you hope to navigate the shattered remnants of a world adrift and perhaps restore the balance Odin's wrath has sundered.
 
-### Debugging with Visual Studio
+May the gods guide you. Remember the tale of the World Tree's severance and the courage of Heimdall, who defied the All-Father to give Valheim a sliver of hope.
 
-Your own code can be debugged in source with Visual Studio itself.
+## Installation (ModManager)
 
-1. Install Visual Studio Tools for Unity (can be done in Visual Studio installer via `Individual Components` -> `Visual Studio Tools for Unity`)
-3. Build the project with target `Debug`. The publish.ps1 PowerShell script from this repo...
-   * copies the generated mod .dll and .pdb to \<ValheimDir>\BepInEx\plugins after a successful build
-   * automatically generates a JotunnModStub.dll.mdb file, which is needed for Unity/mono debugging. It should be in \<ValheimDir>\BepInEx\plugins, too.
-4. Start Valheim (either directly from Steam or hit F5 in Visual Studio when Steam is running)
-5. Go to `Debug` -> `Attach Unity debugger`
-6. You should see your local game instance listed as a target to attach the debugger to. If it is not there, try hitting `Refresh` as the debugger only appears after the game has loaded into the main menu.
+Import the zip file into your mod manager - dependencies should be resolved automatically.
 
-## Actions after a game update
+## Installation (Manual)
 
-When Valheim updates it is likely that parts of the assembly files change. If this is the case, the references to the assembly files must be renewed in Visual Studio and Unity.
+- Install Jotunn (preferably 2.20.1).
+- Copy contents of the zip's plugins directory into your BepInEx\plugins\ directory.
 
-### Visual Studio actions
+## Changelog
 
-1. There is a file called DoPrebuild.props included in the solution. When you set its only value to true, Jötunn will automatically generate publicized assemblies for you. Otherwise you have to do this step manually.
+- rtfm
 
-### Unity actions
+## Known Issues
 
-1. Copy all `assembly_*.dll` from `<ValheimDir>\valheim_Data\Managed` into `<JotunnModStub>\JotunnModUnity\Assets\Assemblies`. <br />
-  **Do this directly in the filesystem - don't import the dlls in Unity**.
-2. Go to Unity Editor and press `Ctrl+R`. This reloads all files from the filesystem and "re-imports" the copied dlls into the project.
+Where shall I start?
