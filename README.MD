@@ -23,7 +23,7 @@ This mod has been made specifically for the most terrible mod contest of OdinPlu
 
 #### Motion Sickness
 - *8 out of 10 players have experienced motion sickness comparable to a seasick Norseman on a stormy sea.*
-- We recommend keeping a sturdy bucket or bag within arm’s reach. Consider ginger ale or anti-nausea medication as a preemptive strike.
+- I recommend keeping a sturdy bucket or bag within arm’s reach. Consider ginger ale or anti-nausea medication as a preemptive strike.
 
 #### Emotional Distress
 - *9 out of 10 players report feelings of deep existential dread and despair.*
@@ -45,7 +45,7 @@ This mod has been made specifically for the most terrible mod contest of OdinPlu
 - *11 out of 10 developers can’t decide if this is groundbreaking or grounds for immediate psychological evaluation.*
 
 #### Support Group Recommended
-- *12 out of 10 developers (yes, we’ve broken the scale) suggest forming a support group.*
+- *12 out of 10 developers suggest forming a support group.*
 
 ## Heimdall's Sanctuary: The Fall of Valheim
 
