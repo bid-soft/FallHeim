@@ -70,10 +70,6 @@ If dependencies are not resolved install mods from next section.
 - Install Jotunn v2.20.1 by ValheimModding
 - Copy contents of the zip's plugins directory into your BepInEx\plugins\ directory.
 
-## Changelog
-
-- rtfm
-
 ## Known Issues
 
 Where shall I start?
