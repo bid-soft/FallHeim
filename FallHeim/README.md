@@ -61,11 +61,13 @@ May the gods guide you. Remember the tale of the World Tree's severance and the 
 
 ## Installation (ModManager)
 
-Import the zip file into your mod manager - dependencies should be resolved automatically.
+Import the zip file into your mod manager.
+If dependencies are not resolved install mods from next section.
 
 ## Installation (Manual)
 
-- Install Jotunn (preferably 2.20.1).
+- Install BepInExPack_Valheim v5.4.2202 by denikson
+- Install Jotunn v2.20.1 by ValheimModding
 - Copy contents of the zip's plugins directory into your BepInEx\plugins\ directory.
 
 ## Changelog
